@@ -75,7 +75,7 @@ public class JournalManager
         }
     }
 }
- 
+  
 class Program 
 {
     static void Main(string[] args) 
@@ -112,7 +112,7 @@ class Program
                     return;
                 default:
                     Console.WriteLine("Invalid option");
-                    break;
+                    break; 
             }
         }
     }  
