@@ -97,25 +97,26 @@ class Program
 
         Console.WriteLine($"{scripture.Reference} - {scripture.GetDisplayText()}");
         Console.WriteLine("Press enter to hide words, type 'quit' to exit.");
-
-        while (true)
-        {
-            var input = Console.ReadLine();
-            if (input.ToLower() == "quit")
-            {
-                break;
-            }
-
-            Console.Clear();
-            scripture.HideRandomWords(3);
-            Console.WriteLine($"{scripture.Reference} - {scripture.GetDisplayText()}");
-            Console.WriteLine("Press enter to hide words, type 'quit' to exit.");
-
-            if (scripture.Words.All(word => word.IsHidden))
-            {
-                Console.WriteLine("All words are hidden. Exiting...");
-                break;
-            }
-        }
-    }
-}
+ 
+ 
+        while (true) 
+        { 
+            var input = Console.ReadLine(); 
+            if (input.ToLower() == "quit") 
+            { 
+                break; 
+            } 
+ 
+            Console.Clear(); 
+            scripture.HideRandomWords(3); 
+            Console.WriteLine($"{scripture.Reference} - {scripture.GetDisplayText()}"); 
+            Console.WriteLine("Press enter to hide words, type 'quit' to exit."); 
+ 
+            if (scripture.Words.All(word => word.IsHidden)) 
+            { 
+                Console.WriteLine("All words are hidden. Exiting..."); 
+                break; 
+            } 
+        } 
+    } 
+} 
